@@ -1,0 +1,514 @@
+@CHARSET "UTF-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.floatLeft {
+	float: left;
+}
+
+.floatRight {
+	float: right;
+}
+
+#topMenu {
+	height: 40px; /* 메인 메뉴의 높이 */
+	width: 100%; /* 메인 메뉴의 넓이 */
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background: linear-gradient(to top, #3c8bd0, #8ccaff);
+	/* 	text-align: center; */
+}
+
+#topMenu ul { /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+	list-style-type: none; /* 메인 메뉴 안의 ul 내부의 목록 표시를 없애줌 */
+	margin: 0px; /* 메인 메뉴 안의 ul의 margin을 없앰 */
+	padding: 0px; /* 메인 메뉴 안의 ul의 padding을 없앰 */
+	/* 	display: inline-block; */
+}
+
+#topMenu ul li { /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+	color: white; /* 글씨 색을 흰색으로 설정 */
+	float: left; /* 왼쪽으로 나열되도록 설정 */
+	line-height: 40px; /* 텍스트 한 줄의 높이를 40px로 설정 */
+	vertical-align: middle; /* 세로 정렬을 가운데로 설정 */
+	text-align: center; /* 텍스트를 가운데로 정렬 */
+	position: relative; /* 해당 li 태그 내부의 top/left 포지션 초기화 */
+}
+
+.menuLink, .submenuLink { /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+	text-decoration: none; /* a 태그의 꾸밈 효과 제거 */
+	display: block; /* a 태그의 클릭 범위를 넓힘 */
+	width: 100px; /* 기본 넓이를 150px로 설정 */
+	font-size: 13px; /* 폰트 사이즈를 12px로 설정 */
+	font-family: "맑은고딕"; /* 기본 폰트를 영어/한글 순서대로 설정 */
+}
+
+.submenuLink {
+	font-size: 12px;
+}
+
+.menuLink { /* 상위 메뉴의 글씨색을 흰색으로 설정 */
+	color: white;
+	/* 	font-weight: bold; 폰트를 굵게 설정 */
+}
+
+.topMenuLi:hover .menuLink { /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+	color: #2e00ff; /* 글씨 색 파랑색 */
+}
+
+.submenuLink { /* 하위 메뉴의 a 태그 스타일 설정 */
+	color: #000000; /* 글씨 색을 RGB(2D2D2D)로 설정 */
+	background-color: white; /* 배경색을 흰색으로 설정 */
+	/* 	border: solid 1px black; 테두리를 설정 */
+	margin-right: -1px; /* 위 칸의 하단 테두리와 아래칸의 상단 테두리가 겹쳐지도록 설덩 */
+}
+
+.longLink { /* 좀 더 긴 메뉴 스타일 설정 */
+	width: 190px; /* 넓이는 190px로 설정 */
+}
+
+.submenu { /* 하위 메뉴 스타일 설정 */
+	position: absolute; /* html의 flow에 영향을 미치지 않게 absolute 설정 */
+	height: 0px; /* 초기 높이는 0px로 설정 */
+	overflow: hidden; /* 실 내용이 높이보다 커지면 해당 내용 감춤 */
+	transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(기본) */
+	-webkit-transition: height .2s;
+	width: 574px;
+	/* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 크롬/사파라ㅣ) */
+	/* 	-moz-transition: height .2s; */
+	/* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 파폭) */
+	/* 	-o-transition: height .2s; */
+	/* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 오페라) */
+}
+
+.submenu li {
+	display: inline-block; /* [변경] 가로로 펼쳐지도록 설정 */
+}
+
+.topMenuLi:hover .submenu { /* 상위 메뉴에 마우스 모버한 경우 그 안의 하위 메뉴 스타일 설정 */
+	height: 50px; /* 높이를 설정 */
+}
+
+.submenuLink:hover { /* 하위 메뉴의 a 태그의 마우스 오버 스타일 설정 */
+	color: #2e00ff; /* 글씨색을 파랑색으로 설정 */
+	background-color: #dddddd; /* 배경을 RGB(DDDDDD)로 설정 */
+}
+
+.logo {
+	float: left;
+	margin-top: -40px;
+	margin-left: 200px;
+}
+
+.topRightMenu {
+	float: right;
+	margin-top: -30px;
+	margin-right: 200px;
+	background-color: #f3f3f3;
+}
+
+.topMiddleMenu {
+	margin-left: 430px;
+}
+
+.textA {
+	color: #337ab7;
+}
+
+.homeCal {
+	border-width: 4px;
+	border-style: solid;
+	width: 230px;
+	height: 210px;
+	border-radius: 10px;
+	border-color: #cee6f0;
+}
+
+.homePOP {
+	margin-top: 6px;
+	margin-bottom: 6px;
+	border-width: 4px;
+	border-style: solid;
+	width: 230px;
+	height: 130px;
+	border-radius: 10px;
+	border-color: #cee6f0;
+}
+
+.mailLeft {
+	float: left;
+	width: 10%;
+	height: 430px;
+	border-radius: 10px;
+	background-size: 100% 100%;
+}
+
+.mailLeftTop {
+	float: left;
+	height: 40%;
+	width: 100%;
+	background: url("../image/skin_menu_2.jpg") no-repeat;
+	background-size: 100%;
+	/* 	background-image: url("../image/skin_menu_2.jpg"); */
+	/* 	background-repeat: no-repeat; */
+}
+
+.mailLeftTop ul {
+	list-style: none;
+}
+
+.mailLeftBottom {
+	float: left;
+	height: 55%;
+	width: 100%;
+	border-radius: 10px;
+	border-width: 4px;
+	border-style: solid;
+	border-color: #dcefdb;
+	text-align: left;
+}
+
+.mailLeftBottom ul {
+	list-style: none;
+}
+
+.mailLeftBottom a {
+	color: #000000;
+}
+
+.mailLeftBottom a:hover {
+	color: blue;
+}
+
+.mailLeftButton {
+	float: right;
+	margin: 5px;
+	font-size: 15px;
+	padding: 5px 17px;
+	color: green;
+	font-weight: bold;
+}
+
+.skinButton {
+	float: right;
+	margin: 5px;
+	border-top: 1px solid #96d1f8;
+	background: #65d676;
+	background: -webkit-gradient(linear, left top, left bottom, from(#599c3e),
+		to(#65d676));
+	background: -webkit-linear-gradient(top, #599c3e, #65d676);
+	background: -moz-linear-gradient(top, #599c3e, #65d676);
+	background: -ms-linear-gradient(top, #599c3e, #65d676);
+	background: -o-linear-gradient(top, #599c3e, #65d676);
+	padding: 2px 4px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+	box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+	text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+	color: white;
+	font-size: 10px;
+	font-family: Georgia, serif;
+	text-decoration: none;
+	vertical-align: middle;
+	margin: 5px;
+}
+
+.skinButton, .mailLeftButton:hover {
+	border-top-color: #48b559;
+	background: #48b559;
+	color: #cccccc;
+}
+
+.skinButton, .mailLeftButton:active {
+	border-top-color: #0fdbff;
+	background: #0fdbff;
+}
+
+.mailRight {
+	float: left;
+	width: 85%;
+	height: 300px;
+	margin-left: 20px;
+	border-radius: 10px;
+	/* 	border-width: 4px; */
+	/* 	border-style: solid; */
+	/* 	border-color: #cee6f0; */
+}
+
+.mailRightTop {
+	float: left;
+	text-align: left;
+	width: 40%;
+	height: 10%;
+	/* 	border-width: 4px; */
+	/* 	border-style: solid; */
+	/* 	border-color: #000000; */
+}
+
+.mailRightTop h3 {
+	display: inline;
+	color: #38b4bc;
+}
+
+.mailRightTop2 {
+	float: right;
+	text-align: right;
+	width: 30%;
+	height: 10%;
+	/* 	border-width: 4px; */
+	/* 	border-style: solid; */
+	/* 	border-color: #000000; */
+}
+
+.mailRightMid {
+	float: left;
+	width: 100%;
+	height: auto;
+	/* 		border-width: 4px; */
+	/* 		border-style: solid; */
+	/* 		border-color: #000000; */
+}
+
+.mailRightMid2 {
+	height: 30px;
+	width: 100%;
+	background-color: #deebe7;
+	border-width: 3px;
+	border-style: solid;
+	border-left: none;
+	border-right: none;
+	border-color: #c5d2ce;
+	background-color: #deebe7;
+	/* 		border-width: 4px; */
+	/* 		border-style: solid; */
+	/* 		border-color: #000000; */
+}
+
+.mailRightBot {
+	float: left;
+	width: 100%;
+	height: 10%;
+	text-align: center;
+	/* 	border-width: 4px; */
+	/* 	border-style: solid; */
+	/* 	border-color: #000000; */
+}
+
+.mailBtn {
+	border-top: 1px solid #96d1f8;
+	background: #65a9d7;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3e779d),
+		to(#65a9d7));
+	background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+	background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+	background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+	background: -o-linear-gradient(top, #3e779d, #65a9d7);
+	padding: 5px 10px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+	box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+	text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+	color: white;
+	font-size: 13px;
+	font-family: Georgia, serif;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.mailBtn:hover {
+	border-top-color: #28597a;
+	background: #28597a;
+	color: #ccc;
+}
+
+.mailBtn:active {
+	border-top-color: #1b435e;
+	background: #1b435e;
+}
+
+#mail {
+	width: 100%;
+}
+
+#mail thead {
+	background-color: #EEEEEE;
+	text-align: center;
+}
+
+#mail tr {
+	text-align: center;
+}
+
+#titleCss {
+	text-align: left;
+}
+
+.mailInputBox {
+	width: 95%;
+	height: 90%;
+}
+
+.borderGray {
+	border-color: #cfcfcf;
+}
+
+.greenText {
+	font-size: 10px;
+	color: green;
+}
+
+.redText {
+	color: red;
+}
+
+.blueText {
+	color: blue;
+}
+
+.normalText {
+	font-weight: normal;
+}
+
+.boldText {
+	font-weight: bold;
+}
+
+.individualSetting {
+	background-color: #f1f6f9;
+}
+
+.individualSetting a {
+	color: #005953;
+}
+
+.individualSetting thead {
+	background-color: #e3f1f2;
+}
+
+.mailSetting {
+	background-color: #f6f5f1;
+}
+
+.mailSetting a {
+	color: #9F410D;
+}
+
+.mailSetting thead {
+	background-color: #f5ecdb;
+}
+
+.mailSetting tr {
+	height: 40px;
+}
+
+.bgGreen {
+	background-color: #eff9ef;
+}
+
+.bgGray {
+	background-color: #e9e9e9;
+}
+
+.bgWhite {
+	background-color: white;
+}
+
+.webHardButton {
+	-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	-webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef
+		), color-stop(1, #019ad2));
+	background: -moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background: -webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background: -o-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background: -ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef',
+		endColorstr='#019ad2', GradientType=0);
+	background-color: #33bdef;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #057fd0;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px 13px;
+	text-decoration: none;
+	text-shadow: 0px -1px 0px #5b6178;
+}
+
+.webHardButton:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2
+		), color-stop(1, #33bdef));
+	background: -moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background: -webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background: -o-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background: -ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+	background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#019ad2',
+		endColorstr='#33bdef', GradientType=0);
+	background-color: #019ad2;
+}
+
+.webHardButton:active {
+	position: relative;
+	top: 1px;
+}
+
+.webHardAllbutton {
+	-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	-webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7bd8f7
+		), color-stop(1, #8ce0ff));
+	background: -moz-linear-gradient(top, #7bd8f7 5%, #8ce0ff 100%);
+	background: -webkit-linear-gradient(top, #7bd8f7 5%, #8ce0ff 100%);
+	background: -o-linear-gradient(top, #7bd8f7 5%, #8ce0ff 100%);
+	background: -ms-linear-gradient(top, #7bd8f7 5%, #8ce0ff 100%);
+	background: linear-gradient(to bottom, #7bd8f7 5%, #8ce0ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7bd8f7',
+		endColorstr='#8ce0ff', GradientType=0);
+	background-color: #7bd8f7;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #057fd0;
+	display: inline-block;
+	cursor: pointer;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px 13px;
+	text-decoration: none;
+	text-shadow: 0px -1px 0px #5b6178;
+}
+
+.webHardAllbutton:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #8ce0ff
+		), color-stop(1, #7bd8f7));
+	background: -moz-linear-gradient(top, #8ce0ff 5%, #7bd8f7 100%);
+	background: -webkit-linear-gradient(top, #8ce0ff 5%, #7bd8f7 100%);
+	background: -o-linear-gradient(top, #8ce0ff 5%, #7bd8f7 100%);
+	background: -ms-linear-gradient(top, #8ce0ff 5%, #7bd8f7 100%);
+	background: linear-gradient(to bottom, #8ce0ff 5%, #7bd8f7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8ce0ff',
+		endColorstr='#7bd8f7', GradientType=0);
+	background-color: #8ce0ff;
+}
+
+.webHardAllbutton:active {
+	position: relative;
+	top: 1px;
+}

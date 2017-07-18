@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+
+#draggablePanelList {
+	cursor: move;
+}
+
+#TO_DO, #DOING, #DONE {
+	min-height: 400px;
+	min-width: 300px;
+	margin: auto;
+	padding: 2px;
+	border-width: 1px;
+	border-color: aqua; -webkit-border-radius : 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	list-style-type: none;
+	list-style-position: inside;
+	-webkit-border-radius: 3px;
+}
+
+.sortable-dragging {
+	border-color: #ccc !important;
+	background-color: #fafafa !important;
+	color: #bbb !important;
+}
+
+.sortable-placeholder {
+	height: 40px;
+}
+
+#TO_DO .sortable-placeholder {
+	border: 2px dashed #f8e0b1 !important;
+	background-color: #fefcf5 !important;
+}
+
+#DOING .sortable-placeholder {
+	border: 2px dashed #f8e0b1 !important;
+	background-color: #fefcf5 !important;
+}
+
+#DONE .sortable-placeholder {
+	border: 2px dashed #add38d !important;
+	background-color: #f6fbf4 !important;
+}
+
+.listActive {
+	border: 1px solid #ccc;
+	background-color: #fcfcfc;
+	padding: 0.5em 0 3em 0 !important;
+}
+
+.placeholder {
+	list-style-type: none;
+	text-align: center;
+	font-style: italic;
+	border: 1px dashed #ddd !important;
+	background-color: #fff !important;
+	color: #aaa !important;
+}
+
+.dismiss {
+	float: right;
+	position: relative;
+	top: -8px;
+	line-height: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none !important;
+	color: #468847;
+}

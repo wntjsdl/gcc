@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gcc:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="gcc-1.0.0-BUILD-SNAPSHOT.war">
+      <element id="artifact" artifact-name="gcc:war exploded" />
+    </root>
+  </artifact>
+</component>
