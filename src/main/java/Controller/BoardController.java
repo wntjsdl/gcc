@@ -224,4 +224,35 @@ public class BoardController {
 		return mv;
 	}
 
+	@RequestMapping(value = "openCalToday.do")
+	public ModelAndView openCalToday() throws Exception {
+		ModelAndView mv = new ModelAndView("calendar/today");
+		return mv;
+	}
+
+	@RequestMapping(value = "openCalWeek.do")
+	public ModelAndView openCalWeek() throws Exception {
+		ModelAndView mv = new ModelAndView("calendar/week");
+		return mv;
+	}
+
+	@RequestMapping(value = "openCalMonth.do")
+	public ModelAndView openCalMonth() throws Exception {
+		ModelAndView mv = new ModelAndView("calendar/month");
+		return mv;
+	}
+
+	@RequestMapping(value = "openContact.do")
+	public ModelAndView openContact() throws Exception {
+		ModelAndView mv = new ModelAndView("contact/contact");
+		return mv;
+	}
+
+	@RequestMapping(value = "openTaskManual.do")
+	public ModelAndView openTaskManual() throws Exception {
+		ModelAndView mv = new ModelAndView("task_manual/task_manual");
+		return mv;
+	}
+
+
 }

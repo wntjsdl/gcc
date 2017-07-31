@@ -115,7 +115,7 @@
 			<tr>
 				<td width="3%"><input type="checkbox"/></td>
 				<td width="15%">wntjs0305@gtu-solution.co.kr</td>
-				<td id="titleCss" width="47%">
+				<td width="47%">
 					<img src="${pageContext.request.contextPath}/resources/image/mail_new.gif">test</td>
 				<td width="15%">17-04-28 (금) 10:22</td>
 				<td width="15%">.</td>

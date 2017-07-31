@@ -6,4 +6,5 @@ public interface MemberDAO {
 
 	void join(MemberVO member);
 
+    MemberVO login(MemberVO memberVO);
 }

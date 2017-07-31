@@ -155,7 +155,7 @@
 				<img src="${pageContext.request.contextPath}/resources/image/flag_important_blur.gif"/>
 				</td>
 				<td width="10%"><a href="#">도완준</a></td>
-				<td id="titleCss" width="61%">
+				<td width="61%">
 				이력서양식공지
 				<img src="${pageContext.request.contextPath}/resources/image/popup_icon.gif"/>
 				</td>
@@ -171,7 +171,7 @@
 				<img src="${pageContext.request.contextPath}/resources/image/flag_important_blur.gif"/>
 				</td>
 				<td width="10%"><a href="#">구상복</a></td>
-				<td id="titleCss" width="61%">
+				<td width="61%">
 				트렌드 코리아 2015 자료
 				<img src="${pageContext.request.contextPath}/resources/image/popup_icon.gif"/>
 				</td>

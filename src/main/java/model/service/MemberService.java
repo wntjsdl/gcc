@@ -6,4 +6,5 @@ public interface MemberService {
 
 	void join(MemberVO member);
 
+    MemberVO login(MemberVO memberVO);
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- JDBC-PostgreSQL -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource" >
+        <property name="driverClass" value="org.postgresql.Driver" />
+        <property name="url" value="jdbc:postgresql://127.0.0.1:5432/gcc" />
+        <property name="username" value="postgres" />
+        <property name="password" value="admin" />
+    </bean>
+
+    <!-- MyBatis-Spring -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:mybatis/config/SqlSessionConfig.xml" />
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg ref="sqlSessionFactory"></constructor-arg>
+    </bean>
+</beans>

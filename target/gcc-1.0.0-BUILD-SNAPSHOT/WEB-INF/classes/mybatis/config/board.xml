@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- MyBatis에서 namespace는 필수적으로 명시해야 함 -->
+ <mapper namespace="board">   
+	
+	<!-- <select id="login" parameterType="map" resultMap="memberRM">
+		<include refid="selectMember" />
+		WHERE (nickname=#{id} or e_mail=#{id}) and password=#{password}
+	</select> -->
+	
+	<select id="findBoardList" resultType="boardVO">
+        <![CDATA[
+	       SELECT idx, title, hit_cnt, crea_date
+	       FROM board
+	       ORDER BY gseq, lev
+        ]]>
+	</select>
+	
+	<insert id="insertBoard" parameterType="boardVO">
+        <![CDATA[
+	       INSERT INTO board(gnum, title, contents, crea_date, email)
+	       VALUES(#{gnum}, #{title}, #{contents}, to_char(now(),'YYYY-MM-DD HH24:MI'), #{email})
+        ]]>
+	</insert>
+	
+	<select id="selectBoardDetail" resultType="boardVO">
+        <![CDATA[
+	       SELECT idx, title, contents, hit_cnt, crea_date, email, url, ip 
+	       FROM board
+	       WHERE idx = #{idx}
+        ]]>
+	</select>
+	
+	<update id="hitUp">
+        <![CDATA[
+        	UPDATE board
+        	SET hit_cnt = hit_cnt+1
+        	WHERE idx = #{idx}
+        ]]>
+	</update>
+	
+	<update id="updateBoard" parameterType="boardVO">
+        <![CDATA[
+        	UPDATE board
+        	SET title = #{title}, contents = #{contents}
+        	WHERE idx = #{idx}
+        ]]>
+	</update>
+	
+	<delete id="deleteBoard">
+        <![CDATA[
+        	DELETE FROM board
+        	WHERE idx = #{idx}
+        ]]>
+	</delete>
+	
+	<select id="getBoardInfoByIdx" resultType="boardVO">
+        <![CDATA[
+	       SELECT gseq, lev
+	       FROM board
+	       WHERE idx = #{idx}
+        ]]>
+	</select>
+	<!-- 
+	<update id="updateIdx">
+        <![CDATA[
+        	UPDATE board
+        	SET idx = idx + 1
+        	WHERE idx > #{idx}
+        ]]>
+	</update>
+	
+	<select id="updateIdxSequence" resultType="int">
+        <![CDATA[
+	       SELECT setval('board_idx_sequence', nextval('board_idx_sequence'));
+        ]]>
+	</select>
+	
+	<select id="updateGidxSequence" resultType="int">
+        <![CDATA[
+	       SELECT setval('board_gidx_sequence', nextval('board_gidx_sequence'));
+        ]]>
+	</select>
+	 -->
+	<insert id="insertBoardReply" parameterType="boardVO">
+        <![CDATA[
+	       INSERT INTO board(gnum, gseq, lev, title, contents, crea_date, email, ip)
+	       VALUES(#{gnum}, #{gseq}, #{lev}, #{title}, #{contents}, to_char(now(),'YYYY-MM-DD HH24:MI'), #{email}, #{ip})
+        ]]>
+	</insert>
+</mapper>
+
+
+

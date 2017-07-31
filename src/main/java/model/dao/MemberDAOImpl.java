@@ -1,11 +1,10 @@
 package model.dao;
 
-import javax.annotation.Resource;
-
+import model.vo.MemberVO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
-import model.vo.MemberVO;
+import javax.annotation.Resource;
 
 @Repository
 public class MemberDAOImpl implements MemberDAO {
@@ -16,5 +15,10 @@ private SqlSessionTemplate template;
 public void join(MemberVO member) {
 	template.insert("member.join", member);
 }
+
+	@Override
+	public MemberVO login(MemberVO memberVO) {
+		return template.selectOne("member.login", memberVO);
+	}
 
 }

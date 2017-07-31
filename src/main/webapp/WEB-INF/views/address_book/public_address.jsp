@@ -140,6 +140,7 @@
                             <td height=30><a href="javascript:sendchk();"><img
                                     src="${pageContext.request.contextPath}/resources/image/button_sendmail.gif" NAME="selectAll0" align=absmiddle></a>&nbsp;&nbsp;</td>
                         </tr>
+                    </form>
                 </table>
 
                 <table cellpadding=1 cellspacing=0 width=100% style="border:1px solid #B9BEC1;">
@@ -153,7 +154,7 @@
                     <tr id="msg_default">
                         <td><input type=checkbox name="check[]" id="check_default" value="DEFAULT"></td>
                         <td><a href="/mail/personal/publicaddressbook/new_address.neo?groupname=%B1%E2%BA%BB"><img src="${pageContext.request.contextPath}/resources/image/i_group.gif"
-                                                                                                                   border=0 align=absmiddle> 기본 (1)</font></a></td>
+                                                                                                                   border=0 align=absmiddle> 기본 (1)</a></td>
                         <td align=center>-</td>
                     </tr>
 
@@ -161,11 +162,9 @@
                         <td><input type=checkbox name="check[]" value="사내" id="check0" onClick="rowUpdate('0');"></td>
                         <td nowrap><a href="/mail/personal/publicaddressbook/new_address.neo?groupname=%BB%E7%B3%BB" ><img
                                 src="${pageContext.request.contextPath}/resources/image/i_group.gif" border=0 align=absmiddle>
-                            사내 (5)</font></a></td>
-                        <td align=center nowrap>&nbsp;&nbsp;<a href="javascript:repair('637','사내');"
-                                                               title="그룹이름수정"><img src="${pageContext.request.contextPath}/resources/image/g_edit.gif"></a>
-                            <a href="javascript:del_group('5', '사내','637');"
-                               title="그룹삭제"><img src="${pageContext.request.contextPath}/resources/image/g_del.gif"></a>&nbsp;&nbsp;</td>
+                            사내 (5)</a></td>
+                        <td align=center nowrap>&nbsp;&nbsp;<a href="javascript:repair('637','사내');"><img src="${pageContext.request.contextPath}/resources/image/g_edit.gif"></a>
+                            <a href="javascript:del_group('5', '사내','637');"><img src="${pageContext.request.contextPath}/resources/image/g_del.gif"></a>&nbsp;&nbsp;</td>
                     </tr>
 
                     </form>
@@ -254,6 +253,7 @@
                                 </table>
                             </td>
                         </tr>
+                    </form>
                 </table>
 
 
@@ -276,7 +276,7 @@
                         <td align=center nowrap><input type=checkbox name=check[] value='66723'
                                                        id='check66723' onClick="rowUpdate('66723');"></td>
                         <td nowrap><a href="javascript:javascript:ToggleMenu(66723);">관리자</a></td>
-                        <td nowrap><a href="javascript:adress_location('admin@dosang.kr','');" hidefocus title='메일보내기'>admin@dosang.kr</a>
+                        <td nowrap><a href="javascript:adress_location('admin@dosang.kr','');" hidefocus>admin@dosang.kr</a>
                         </td>
                         <td nowrap>&nbsp;</td>
                         <td align=center nowrap><a
@@ -293,13 +293,14 @@
                                      onClick="window.open('contacts.neo?pk_id=66723&groupname=&page=1','','width=680,height=450,scrollbars=no,resizable=no,titlebar=no,menubar=no,toolbar=no');"
                                      hidefocus><img
                                     src='${pageContext.request.contextPath}/resources/image/personal_detail_info.gif'
-                                    border=0 align=absmiddle title='상세정보'> </a><font
+                                    border=0 align=absmiddle> </span><font
                                     color=#0157E5>관리자</font>님의 상세 정보</b>&nbsp;&nbsp;&nbsp;
                             <br><br>
                             연&nbsp;&nbsp;락&nbsp;&nbsp;처 : &nbsp;<br>
                             집&nbsp;&nbsp;전&nbsp;&nbsp;화 : <br>
                             휴&nbsp;&nbsp;대&nbsp;&nbsp;폰 : <br>
                             개인웹페이지 : <a href='' target=_blank><br>
+                        </a>
                         </td>
                         <td colspan=2 style='border-top:1px solid slategray;border-bottom:1px solid slategray'>
                             <b>&nbsp;</b><br><br>
@@ -316,7 +317,7 @@
                         <td align=center nowrap><input type=checkbox name=check[] value='66725'
                                                        id='check66725' onClick="rowUpdate('66725');"></td>
                         <td nowrap><a href="javascript:javascript:ToggleMenu(66725);">구상복</a></td>
-                        <td nowrap><a href="javascript:adress_location('dream@dosang.kr','');" hidefocus title='메일보내기'>dream@dosang.kr</a>
+                        <td nowrap><a href="javascript:adress_location('dream@dosang.kr','');" hidefocus>dream@dosang.kr</a>
                         </td>
                         <td nowrap>&nbsp;</td>
                         <td align=center nowrap><a
@@ -333,13 +334,15 @@
                                      onClick="window.open('contacts.neo?pk_id=66725&groupname=&page=1','','width=680,height=450,scrollbars=no,resizable=no,titlebar=no,menubar=no,toolbar=no');"
                                      hidefocus><img
                                     src='${pageContext.request.contextPath}/resources/image/personal_detail_info.gif'
-                                    border=0 align=absmiddle title='상세정보'> </a><font
-                                    color=#0157E5>구상복</font>님의 상세 정보</b>&nbsp;&nbsp;&nbsp;
+                                    border=0 align=absmiddle> </a><font
+                                    color=#0157E5>구상복</font>님의 상세 정보</span>
+                            </b>&nbsp;&nbsp;&nbsp;
                             <br><br>
                             연&nbsp;&nbsp;락&nbsp;&nbsp;처 : &nbsp;<br>
                             집&nbsp;&nbsp;전&nbsp;&nbsp;화 : <br>
                             휴&nbsp;&nbsp;대&nbsp;&nbsp;폰 : <br>
                             개인웹페이지 : <a href='' target=_blank><br>
+                        </a>
                         </td>
                         <td colspan=2 style='border-top:1px solid slategray;border-bottom:1px solid slategray'>
                             <b>&nbsp;</b><br><br>
@@ -356,7 +359,7 @@
                         <td align=center nowrap><input type=checkbox name=check[] value='66722'
                                                        id='check66722' onClick="rowUpdate('66722');"></td>
                         <td nowrap><a href="javascript:javascript:ToggleMenu(66722);">김병화</a></td>
-                        <td nowrap><a href="javascript:adress_location('kbhwa@dosang.kr','');" hidefocus title='메일보내기'>kbhwa@dosang.kr</a>
+                        <td nowrap><a href="javascript:adress_location('kbhwa@dosang.kr','');" hidefocus>kbhwa@dosang.kr</a>
                         </td>
                         <td nowrap>&nbsp;</td>
                         <td align=center nowrap><a
@@ -373,13 +376,14 @@
                                      onClick="window.open('contacts.neo?pk_id=66722&groupname=&page=1','','width=680,height=450,scrollbars=no,resizable=no,titlebar=no,menubar=no,toolbar=no');"
                                      hidefocus><img
                                     src='${pageContext.request.contextPath}/resources/image/personal_detail_info.gif'
-                                    border=0 align=absmiddle title='상세정보'> </a><font
+                                    border=0 align=absmiddle> </span><font
                                     color=#0157E5>김병화</font>님의 상세 정보</b>&nbsp;&nbsp;&nbsp;
                             <br><br>
                             연&nbsp;&nbsp;락&nbsp;&nbsp;처 : &nbsp;<br>
                             집&nbsp;&nbsp;전&nbsp;&nbsp;화 : <br>
                             휴&nbsp;&nbsp;대&nbsp;&nbsp;폰 : <br>
                             개인웹페이지 : <a href='' target=_blank><br>
+                        </a>
                         </td>
                         <td colspan=2 style='border-top:1px solid slategray;border-bottom:1px solid slategray'>
                             <b>&nbsp;</b><br><br>
@@ -396,8 +400,7 @@
                         <td align=center nowrap><input type=checkbox name=check[] value='66726'
                                                        id='check66726' onClick="rowUpdate('66726');"></td>
                         <td nowrap><a href="javascript:javascript:ToggleMenu(66726);">도완준</a></td>
-                        <td nowrap><a href="javascript:adress_location('woanjundo@dosang.kr','');" hidefocus
-                                      title='메일보내기'>woanjundo@dosang.kr</a></td>
+                        <td nowrap><a href="javascript:adress_location('woanjundo@dosang.kr','');" hidefocus>woanjundo@dosang.kr</a></td>
                         <td nowrap>&nbsp;</td>
                         <td align=center nowrap><a
                                 href="javascript:open_newwin('adress_repair.neo?pk_id=66726&loca=&groupname=&page=1','', 420, 270);"
@@ -413,13 +416,14 @@
                                      onClick="window.open('contacts.neo?pk_id=66726&groupname=&page=1','','width=680,height=450,scrollbars=no,resizable=no,titlebar=no,menubar=no,toolbar=no');"
                                      hidefocus><img
                                     src='${pageContext.request.contextPath}/resources/image/personal_detail_info.gif'
-                                    border=0 align=absmiddle title='상세정보'> </a><font
+                                    border=0 align=absmiddle> </span><font
                                     color=#0157E5>도완준</font>님의 상세 정보</b>&nbsp;&nbsp;&nbsp;
                             <br><br>
                             연&nbsp;&nbsp;락&nbsp;&nbsp;처 : &nbsp;<br>
                             집&nbsp;&nbsp;전&nbsp;&nbsp;화 : <br>
                             휴&nbsp;&nbsp;대&nbsp;&nbsp;폰 : <br>
                             개인웹페이지 : <a href='' target=_blank><br>
+                        </a>
                         </td>
                         <td colspan=2 style='border-top:1px solid slategray;border-bottom:1px solid slategray'>
                             <b>&nbsp;</b><br><br>
@@ -436,8 +440,7 @@
                         <td align=center nowrap><input type=checkbox name=check[] value='66777'
                                                        id='check66777' onClick="rowUpdate('66777');"></td>
                         <td nowrap><a href="javascript:javascript:ToggleMenu(66777);">이상일</a></td>
-                        <td nowrap><a href="javascript:adress_location('sangilee73@dosang.kr','');" hidefocus
-                                      title='메일보내기'>sangilee73@dosang.kr</a></td>
+                        <td nowrap><a href="javascript:adress_location('sangilee73@dosang.kr','');" hidefocus>sangilee73@dosang.kr</a></td>
                         <td nowrap>&nbsp;</td>
                         <td align=center nowrap><a
                                 href="javascript:open_newwin('adress_repair.neo?pk_id=66777&loca=&groupname=&page=1','', 420, 270);"
@@ -453,13 +456,14 @@
                                      onClick="window.open('contacts.neo?pk_id=66777&groupname=&page=1','','width=680,height=450,scrollbars=no,resizable=no,titlebar=no,menubar=no,toolbar=no');"
                                      hidefocus><img
                                     src='${pageContext.request.contextPath}/resources/image/personal_detail_info.gif'
-                                    border=0 align=absmiddle title='상세정보'> </a><font
+                                    border=0 align=absmiddle> </span><font
                                     color=#0157E5>이상일</font>님의 상세 정보</b>&nbsp;&nbsp;&nbsp;
                             <br><br>
                             연&nbsp;&nbsp;락&nbsp;&nbsp;처 : &nbsp;<br>
                             집&nbsp;&nbsp;전&nbsp;&nbsp;화 : <br>
                             휴&nbsp;&nbsp;대&nbsp;&nbsp;폰 : <br>
                             개인웹페이지 : <a href='' target=_blank><br>
+                        </a>
                         </td>
                         <td colspan=2 style='border-top:1px solid slategray;border-bottom:1px solid slategray'>
                             <b>&nbsp;</b><br><br>
@@ -476,8 +480,7 @@
                         <td align=center nowrap><input type=checkbox name=check[] value='66724'
                                                        id='check66724' onClick="rowUpdate('66724');"></td>
                         <td nowrap><a href="javascript:javascript:ToggleMenu(66724);">장대호</a></td>
-                        <td nowrap><a href="javascript:adress_location('dhchang0@dosang.kr','');" hidefocus
-                                      title='메일보내기'>dhchang0@dosang.kr</a></td>
+                        <td nowrap><a href="javascript:adress_location('dhchang0@dosang.kr','');" hidefocus>dhchang0@dosang.kr</a></td>
                         <td nowrap>&nbsp;</td>
                         <td align=center nowrap><a
                                 href="javascript:open_newwin('adress_repair.neo?pk_id=66724&loca=&groupname=&page=1','', 420, 270);"
@@ -493,13 +496,14 @@
                                      onClick="window.open('contacts.neo?pk_id=66724&groupname=&page=1','','width=680,height=450,scrollbars=no,resizable=no,titlebar=no,menubar=no,toolbar=no');"
                                      hidefocus><img
                                     src='${pageContext.request.contextPath}/resources/image/personal_detail_info.gif'
-                                    border=0 align=absmiddle title='상세정보'> </a><font
+                                    border=0 align=absmiddle> </span><font
                                     color=#0157E5>장대호</font>님의 상세 정보</b>&nbsp;&nbsp;&nbsp;
                             <br><br>
                             연&nbsp;&nbsp;락&nbsp;&nbsp;처 : &nbsp;<br>
                             집&nbsp;&nbsp;전&nbsp;&nbsp;화 : <br>
                             휴&nbsp;&nbsp;대&nbsp;&nbsp;폰 : <br>
                             개인웹페이지 : <a href='' target=_blank><br>
+                        </a>
                         </td>
                         <td colspan=2 style='border-top:1px solid slategray;border-bottom:1px solid slategray'>
                             <b>&nbsp;</b><br><br>

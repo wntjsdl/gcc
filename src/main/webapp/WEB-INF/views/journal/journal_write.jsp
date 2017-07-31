@@ -457,14 +457,14 @@
                     <td height="27px" align="center" bgcolor="E3EEF8">업무내용</td>
                     <td height="170px" bgcolor="#FAFAFA" style="padding-left:8pt">
 
-                        <textarea name="txtTOD_T" cols="87" rows="11" style="border=1 solid;border-color:D1D1D1"
+                        <textarea name="txtTOD_T" cols="87" rows="11" style="border:1px solid;border-color:#D1D1D1"
                                   onfocus="lin_chk()"></textarea></td>
                 </tr>
                 <tr>
                     <td height="27px" align="center" bgcolor="E3EEF8">예정내용</td>
                     <td height="170px" bgcolor="#FAFAFA" style="padding-left:8pt">
 
-                        <textarea name="txtTOM_T" cols="87" rows="11" style="border=1 solid;border-color:D1D1D1"
+                        <textarea name="txtTOM_T" cols="87" rows="11" style="border:1px solid;border-color:#D1D1D1"
                                   onfocus="lin_chk()"></textarea></td>
                 </tr>
                 <tr>
@@ -519,13 +519,13 @@
                                                                 <strong>[2017년 7월]</strong>
                                                                 <a href=wd_ed_cal.asp?Year=2017&Month=8>
                                                                     <img src="${pageContext.request.contextPath}/resources/image/imgs/img_main/arr_02.gif"
-                                                                         border="0" align="absmiddle"></a></a></td>
+                                                                         border="0" align="absmiddle"></a></td>
                                                         </tr>
                                                     </table>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td height="145" align="center" valign="top" style="padding-top:2">
+                                                <td height="145" align="center" valign="top" style="padding-top:2px">
 
                                                     <table width="100%" border="0" cellpadding="1" cellspacing="1"
                                                            bgcolor="#FFFFFF">

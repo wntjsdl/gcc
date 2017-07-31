@@ -1,13 +1,13 @@
 package Controller;
 
-import javax.annotation.Resource;
-
+import model.service.MemberService;
+import model.vo.MemberVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import model.service.MemberService;
-import model.vo.MemberVO;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class MemberController {
@@ -34,6 +34,23 @@ public class MemberController {
 	public String join(MemberVO member) {
 		System.out.println("id: " + member.getId() + ", password: " + member.getPassword());
 		memberService.join(member);
-		return "redirect:login_form.do";
+		return "redirect:index.do";
+	}
+
+	@RequestMapping(value = "login.do", method = RequestMethod.POST)
+	public String login(HttpSession session, MemberVO memberVO){
+		MemberVO mvo = memberService.login(memberVO);
+		if(mvo == null)
+			return "empty/login_fail";
+		else {
+			session.setAttribute("mvo", mvo);
+			return "redirect:home.do";
+		}
+	}
+
+	@RequestMapping("logout.do")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:index.do";
 	}
 }

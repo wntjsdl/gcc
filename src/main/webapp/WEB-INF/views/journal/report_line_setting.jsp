@@ -54,7 +54,7 @@
                     <tr>
                         <td width="53%">※ 보고선명칭
                             <input type="text" name="New_name" class=box size="30">
-                            </font></td>
+                            </td>
                         <td width="22%" align="center">※ 확인자
                             <select name="decision_num">
                                 <option value="1"> 1</option>
@@ -66,7 +66,7 @@
                                 <option value="7"> 7</option>
                                 <option value="8"> 8</option>
                                 <option value="9"> 9</option>
-                            </select>명</font></td>
+                            </select>명</td>
                         <td align="center">
                             <img src="${pageContext.request.contextPath}/resources/image/imgs/bt_02.gif" width="131"
                                  height="21" border="0" style="cursor:hand" onClick="Check()"></td>
@@ -98,7 +98,7 @@
                                                             <img src="${pageContext.request.contextPath}/resources/image/folderc2.gif"
                                                                  border=0 align=absmiddle>
 
-                                                            <font color="#000000">임원</a></font>
+                                                            <font color="#000000">임원</font></a></font>
                                                     </TD>
                                                 </TR>
                                                 <TR bgcolor="#FAFAFA" onmouseout="this.style.background='FAFAFA'"
@@ -108,7 +108,7 @@
                                                             <img src="${pageContext.request.contextPath}/resources/image/folderc2.gif"
                                                                  border=0 align=absmiddle>
 
-                                                            <font color="#000000">솔루션사업부</a></font>
+                                                            <font color="#000000">솔루션사업부</font></a></font>
                                                     </TD>
                                                 </TR>
                                                 <TR bgcolor="#FAFAFA" onmouseout="this.style.background='FAFAFA'"
@@ -118,7 +118,7 @@
                                                             <img src="${pageContext.request.contextPath}/resources/image/folderc2.gif"
                                                                  border=0 align=absmiddle>
 
-                                                            <font color="#000000">컨설팅사업부</a></font>
+                                                            <font color="#000000">컨설팅사업부</font></a></font>
                                                     </TD>
                                                 </TR>
                                                 <TR bgcolor="#FAFAFA" bgcolor="#FAFAFA"
@@ -129,7 +129,7 @@
                                                             <img src="${pageContext.request.contextPath}/resources/image/folderc2.gif"
                                                                  border=0 align=absmiddle>
 
-                                                            <font color="#000000">연구전담부서</a></font>
+                                                            <font color="#000000">연구전담부서</font></a></font>
                                                     </TD>
                                                 </TR>
                                             </TABLE>
@@ -149,7 +149,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <TD valign="top" bgcolor="#FAFAFA" style="padding:10"><BR>
+                                        <TD valign="top" bgcolor="#FAFAFA" style="padding:10px"><BR>
                                             보고선을 등록하려면 <br>
                                             <B>고선명칭, 확인자수</B>를 지정한 후<b>
                                                 <font color="3366CC"><br>보고선 지정신규 등록버튼</font></b>을 클릭하세요.

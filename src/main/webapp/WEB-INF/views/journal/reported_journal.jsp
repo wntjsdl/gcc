@@ -451,14 +451,14 @@
                                                                             <a href=wd_ed_cal.asp?Year=2017&Month=8>
                                                                                 <img src="${pageContext.request.contextPath}/resources/image/imgs/img_main/arr_02.gif"
                                                                                      border="0"
-                                                                                     align="absmiddle"></a></a></td>
+                                                                                     align="absmiddle"></a></td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td height="145" align="center" valign="top"
-                                                                style="padding-top:2">
+                                                                style="padding-top:2px">
 
                                                                 <table width="100%" border="0" cellpadding="1"
                                                                        cellspacing="1"

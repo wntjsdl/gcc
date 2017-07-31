@@ -1,11 +1,10 @@
 package model.service;
 
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Service;
-
 import model.dao.MemberDAO;
 import model.vo.MemberVO;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 @Service
 public class MemberServiceImpl implements MemberService {
@@ -15,5 +14,10 @@ private MemberDAO memberDAO;
 @Override
 public void join(MemberVO member) {
 		memberDAO.join(member);
+	}
+
+	@Override
+	public MemberVO login(MemberVO memberVO) {
+		return memberDAO.login(memberVO);
 	}
 }

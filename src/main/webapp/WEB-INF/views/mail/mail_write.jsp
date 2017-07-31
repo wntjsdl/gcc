@@ -156,7 +156,7 @@
 						<tr>
 							<td></td>
 							<td colspan="4">
-								<textarea rows="15" cols="100" title="내용" id="contents" name="contents"></textarea>
+								<textarea rows="15" cols="100" id="contents" name="contents"></textarea>
 							</td>
 						</tr>
 						<tr>
@@ -175,7 +175,7 @@
 					</tbody>
 				</table>
 				<br>
-				<table id="mail">
+				<table <%--id="mail"--%>>
 					<thead>
 						<tr>
 							<td width="10%">
@@ -219,7 +219,7 @@
 			  </div>
 			  <div role="tabpanel" class="tab-pane fade" id="text">
 			  	
-				<table id="mail">
+				<table <%--id="mail"--%>>
 					<thead>
 						<tr>
 							<td colspan="5" width="100%">
@@ -290,7 +290,7 @@
 						<tr>
 							<td></td>
 							<td colspan="5" align="left">
-								<textarea rows="15" cols="100" title="내용" name="text"></textarea>
+								<textarea rows="15" cols="100" name="text"></textarea>
 							</td>
 						</tr>
 						<tr>
@@ -309,7 +309,7 @@
 					</tbody>
 				</table>
 				<br>
-				<table id="mail">
+				<table <%--id="mail"--%>>
 					<thead>
 						<tr>
 							<td width="10%">

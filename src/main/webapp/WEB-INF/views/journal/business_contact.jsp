@@ -52,7 +52,7 @@
         <tr>
             <td width="130" height="40">Total : 3 건</td>
             <td align="center">
-                <img src="${pageContext.request.contextPath}/resources/image/imgs/bt_ceo.gif" border="0" align="absmiddle" style="cursor:hand" onClick="top10();" title="'대표이사' 직급자가 요청한 업무내역 탑 10을 표시합니다.">
+                <img src="${pageContext.request.contextPath}/resources/image/imgs/bt_ceo.gif" border="0" align="absmiddle" style="cursor:hand" onClick="top10();">
             </td>
             <td align="right">
                 <select name="sel_send_receive" onChange="new_form.submit();">
